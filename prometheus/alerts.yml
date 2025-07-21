@@ -1,0 +1,12 @@
+groups:
+- name: sample-app-alerts
+  rules:
+  - alert: HighCPUUsage
+    expr: app_cpu_usage_percent > 40
+    for: 5s
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU Usage"
+      description: "CPU usage is above 40% for more than 5 seconds"
+
